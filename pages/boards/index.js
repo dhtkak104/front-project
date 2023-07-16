@@ -6,7 +6,6 @@ import Axios from 'axios';
 
 export default function Boards({ boards }) {
   const info = {title: '게시판'};
-  console.log('test');
   return (
     <div>
       <HeadInfo info={info} />
@@ -49,8 +48,6 @@ export async function getStaticProps(){
   const apiUrl = process.env.apiUrl + 'boards';
   const res = await Axios.get(apiUrl);
   const boards = res.data.data;
-  console.log(boards);
-  console.log('test');
   return {
     props: {
       boards
