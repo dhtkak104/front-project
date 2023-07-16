@@ -6,7 +6,7 @@ import Axios from 'axios';
 
 export default function Boards({ boards }) {
   const info = {title: '게시판'};
-
+  console.log('test');
   return (
     <div>
       <HeadInfo info={info} />
