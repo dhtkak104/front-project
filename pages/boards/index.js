@@ -49,9 +49,6 @@ export async function getStaticProps(){
   const res = await Axios.get(apiUrl);
   const boards = res.data.data;
   return {
-    props: {
-      boards
-    },
-    revalidate: 6000
+    props: {boards},revalidate: 6000
   }
 }
