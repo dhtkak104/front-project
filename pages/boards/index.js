@@ -47,8 +47,13 @@ export default function Boards({ boards }) {
 export async function getStaticProps(){
   const apiUrl = process.env.apiUrl + 'boards';
   const res = await Axios.get(apiUrl);
-  const boards = res.data.data;
+  const data = res.data;
+  const boards = data.data;
+  console.log(boards);
   return {
-    props: {boards}, revalidate: 6000
-  }
+    props: {
+      boards
+    }
+    ,revalidate: 6000
+    }
 }
