@@ -52,9 +52,6 @@ export async function getStaticProps(){
   console.log(boards);
   console.log('test');
   return {
-    props: {
-      boards
-    },
-    revalidate: 6000
+    props: {boards},revalidate: 6000
   }
 }
