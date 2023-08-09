@@ -48,6 +48,7 @@ export async function getStaticProps(context) {
   const res = await Axios.get(apiUrl);
   const board = res.data.data;
   console.log('test');
+  console.log('test');
 
   return {
     props: {
